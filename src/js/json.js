@@ -2,7 +2,6 @@ var noOfObjects = 0;
 var totalProperties = 0;
 var names = [];
 var values = [];
-var jsonData = {};
 var noOfValues = 0;
 
 //intialise the number of objects and call the function to get no of keys
@@ -43,7 +42,7 @@ function getPropertyNames(){
         noOfValues++;
         }
     }
-    print += `<div class="text-center"><button class="btn custom-btn" onclick="saveValues()">Next</button></div>`;
+    print += `<div class="text-center"><button class="btn custom-btn" onclick="saveValues()">Generate JSON</button></div>`;
     document.getElementById('main-data').innerHTML = print;
 }
 
@@ -61,18 +60,25 @@ function saveValues(){
     let objArray=[];
     while(j<noOfValues)
     {
+        let jsonData = {};
+        console.log(totalProperties);
         for(let k=0;k<totalProperties;k++)
-        {
+        {   
+            console.log(names[k]+" "+values[j]);
             jsonData[names[k]]=values[j];
             j++;
         }
+        console.log(jsonData);
         objArray.push(jsonData);
+        console.log(objArray);
     }
     /*jsonData[names[0]] = values[0];
     jsonData[names[1]] = values[1];*/
     console.log(objArray);
     console.log(typeof objArray);
     let data = JSON.stringify(objArray,null,2);
-    console.log(data);
-    console.log(typeof data);
+
+    localStorage.setItem('jsonData',data);
+    window.location.href = "download.html";
+
 }
