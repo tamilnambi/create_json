@@ -1,7 +1,7 @@
 .icons a {
     display: inline-flex;
-    width: 100px;
-    height: 100px;
+    width: 8rem;
+    height: 8rem;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -43,4 +43,11 @@
   .icons a:hover {
     background-position: 0% 100%;
     color: #fff;
+  }
+
+  @media only screen and (max-width: 770px) {
+    .icons{
+      flex-direction: column;
+      align-items: center;
+    }
   }
