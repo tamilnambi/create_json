@@ -1,20 +1,11 @@
 #cover-image {
     width: 30vw;
 }
-#min-header{
-    display: none;
-}
 @media only screen and (max-width: 770px) {
     main {
       flex-direction: column;
     }
-    #max-header {
-        display: none !important;
-    }
     #cover-image {
         width: 50vw;
-    }
-    #min-header{
-        display: block;
     }
   }

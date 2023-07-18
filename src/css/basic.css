@@ -31,3 +31,14 @@ body {
 .nav-link {
   color: var(--custom-blue);
 }
+#min-header {
+  display: none;
+}
+@media only screen and (max-width: 770px) {
+  #min-header {
+    display: block;
+  }
+  #max-header {
+    display: none !important;
+  }
+}
