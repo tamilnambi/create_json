@@ -3,7 +3,7 @@ function updateFavicon(themeColor) {
   if (themeColor === "light") {
     favicon.href = "../src/img/black_favicon.svg";
   } else if (themeColor === "dark") {
-    favicon.href = "../src/img/white_favicon.svg";
+    favicon.href = "../src/img/white_logo.png";
   }
 }
 
