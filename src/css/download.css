@@ -5,3 +5,9 @@
     width: 50vw;
     height: 60vh;
 }
+
+@media only screen and (max-width: 770px) {
+    #result-div {
+      flex-direction: column;
+    }
+  }

@@ -72,10 +72,8 @@ function saveValues(){
         objArray.push(jsonData);
         console.log(objArray);
     }
-    /*jsonData[names[0]] = values[0];
-    jsonData[names[1]] = values[1];*/
-    console.log(objArray);
-    console.log(typeof objArray);
+    //console.log(objArray);
+    //console.log(typeof objArray);
     let data = JSON.stringify(objArray,null,2);
 
     localStorage.setItem('jsonData',data);

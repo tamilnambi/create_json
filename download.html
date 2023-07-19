@@ -17,7 +17,7 @@
       id="favicon"
     />
     <link rel="stylesheet" href="src/css/basic.css" />
-    <link rel="stylesheet" href="src/css/download.css">
+    <link rel="stylesheet" href="src/css/download.css" />
     <script src="src/js/favicon.js"></script>
   </head>
   <body>
@@ -26,7 +26,11 @@
         id="max-header"
         class="d-flex mx-3 my-2 justify-content-between align-items-center"
       >
-      <div><a href="index.html"><img src="src/img/logo.png" alt="logo" id="logo" /></a></div>
+        <div>
+          <a href="index.html"
+            ><img src="src/img/logo.png" alt="logo" id="logo"
+          /></a>
+        </div>
         <div id="link">
           <a href="json_generator.html">JSON Generator</a>
           <a href="faq.html">How To Use</a>
@@ -36,8 +40,18 @@
       <div id="min-header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="src/img/logo.png" alt="logo" width="100rem"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#"
+              ><img src="src/img/logo.png" alt="logo" width="100rem"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,28 +71,51 @@
         </nav>
       </div>
     </header>
-    <main class="m-5 p-5 d-flex">
-        <div class="border p-2 bg-secondary-subtle">
-        <div class="text-end"><button type="button" class="btn" onclick="copyCode()" id="copyCode"><img src="src/img/copy.png" width="20rem"></button></div>
-        <div id="json-display">
+    <main class="m-5 p-5 d-flex" id="result-div">
+      <div class="border p-2 bg-secondary-subtle">
+        <div class="text-end">
+          <button type="button" class="btn" onclick="copyCode()" id="copyCode">
+            <img src="src/img/copy.png" width="20rem" />
+          </button>
         </div>
-    </div>
-        <div id="json-download" class="d-flex align-items-center justify-content-center" class="border p-2">
-            <button type="button" class="btn custom-btn" onclick="downloadJSON()">Download JSON</button>
-        </div>
+        <div id="json-display"></div>
+      </div>
+      <div
+        id="json-download"
+        class="d-flex align-items-center justify-content-center"
+        class="border p-2"
+      >
+        <button type="button" class="btn custom-btn" onclick="downloadJSON()">
+          Download JSON
+        </button>
+      </div>
     </main>
 
     <!-- Showing alert for copy to clipboard -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
-      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
         <div class="toast-header">
-          <img src="src/img/logo.png" class="rounded me-2" alt="..." width="30rem">
+          <img
+            src="src/img/logo.png"
+            class="rounded me-2"
+            alt="..."
+            width="30rem"
+          />
           <strong class="me-auto">CreateJSON</strong>
-          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
         </div>
-        <div class="toast-body">
-          Copied to Clipboard!
-        </div>
+        <div class="toast-body">Copied to Clipboard!</div>
       </div>
     </div>
     <script
